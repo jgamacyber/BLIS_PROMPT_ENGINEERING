@@ -24,3 +24,11 @@ env/
 Thumbs.db
 .vscode/
 .idea/
+
+# Artefatos de build
+build/
+dist/
+*.so
+
+# Logs
+*.log
