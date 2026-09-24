@@ -1,6 +1,6 @@
 # BLIS — Módulo 02: Engenharia de Prompts
 
-Script e notebook que recebem um conjunto de perguntas, rodam **versões diferentes de prompt** — zero-shot, few-shot, com persona, com instrução estruturada, chain-of-thought — e **comparam as saídas**. Inclui roteamento de prompts e otimização automática de instrução.
+Script e notebook que recebem um conjunto de perguntas, rodam **versões diferentes de prompt** --> zero-shot, few-shot, com persona, com instrução estruturada, chain-of-thought <-- e **comparam as saídas**. Inclui roteamento de prompts e otimização automática de instrução.
 
 Tudo implementado do zero, sem frameworks de prompting. As estratégias são fundamentadas nos artigos, não em folclore de internet — e cada uma é **medida** em vez de assumida.
 
