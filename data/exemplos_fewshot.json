@@ -1,0 +1,62 @@
+[
+  {
+    "categoria": "aritmetica",
+    "pergunta": "Lucas tinha 12 figurinhas. Ele ganhou 3 pacotes com 5 figurinhas cada. Quantas figurinhas ele tem agora?",
+    "raciocinio": "Lucas começou com 12 figurinhas. Três pacotes de 5 figurinhas são 3 x 5 = 15 figurinhas. Somando, 12 + 15 = 27.",
+    "resposta": "27"
+  },
+  {
+    "categoria": "aritmetica",
+    "pergunta": "Uma caixa tem 48 parafusos. Foram usados 2/3 deles em um móvel. Quantos parafusos sobraram?",
+    "raciocinio": "Dois terços de 48 são 48 x 2 / 3 = 32 parafusos usados. Restam 48 - 32 = 16.",
+    "resposta": "16"
+  },
+  {
+    "categoria": "aritmetica",
+    "pergunta": "Um livro custa R$ 60,00 e está com 15% de desconto. Qual o preço final?",
+    "raciocinio": "O desconto é 15% de 60, ou seja, 0,15 x 60 = 9 reais. O preço final é 60 - 9 = 51 reais.",
+    "resposta": "51"
+  },
+  {
+    "categoria": "logica",
+    "pergunta": "João é mais velho que Pedro. Pedro é mais velho que Rita. Quem é o mais novo?",
+    "raciocinio": "João é mais velho que Pedro, e Pedro é mais velho que Rita. A ordem decrescente de idade é João, Pedro, Rita. Portanto a mais nova é Rita.",
+    "resposta": "Rita"
+  },
+  {
+    "categoria": "logica",
+    "pergunta": "Uma lâmpada está apagada. Ana aperta o interruptor. Bruno aperta o interruptor. A lâmpada está acesa? Responda apenas sim ou não.",
+    "raciocinio": "A lâmpada começa apagada. Ana aperta e ela acende. Bruno aperta e ela apaga. Foram dois apertos, um número par, então ela volta ao estado inicial, apagada.",
+    "resposta": "não"
+  },
+  {
+    "categoria": "classificacao",
+    "pergunta": "Classifique o sentimento do texto como positivo, negativo ou neutro. Texto: \"A embalagem veio amassada, mas o conteúdo estava intacto.\"",
+    "raciocinio": "O texto menciona um problema, a embalagem amassada, e um ponto favorável, o conteúdo intacto. Os dois se equilibram e não há juízo de valor forte.",
+    "resposta": "neutro"
+  },
+  {
+    "categoria": "classificacao",
+    "pergunta": "Classifique o sentimento do texto como positivo, negativo ou neutro. Texto: \"Atendimento impecável, resolveram meu problema em minutos.\"",
+    "raciocinio": "As expressões \"impecável\" e \"resolveram em minutos\" são claramente elogiosas, sem ressalvas.",
+    "resposta": "positivo"
+  },
+  {
+    "categoria": "extracao",
+    "pergunta": "Extraia apenas a data do texto: \"Contrato 8812, firmado em 05/07/2025, no valor de R$ 1.500,00.\"",
+    "raciocinio": "O texto traz três informações: o número do contrato 8812, a data 05/07/2025 e o valor R$ 1.500,00. A data pedida é 05/07/2025.",
+    "resposta": "05/07/2025"
+  },
+  {
+    "categoria": "factual",
+    "pergunta": "Qual é a capital do Japão?",
+    "raciocinio": "A capital do Japão é Tóquio desde 1868, quando substituiu Quioto.",
+    "resposta": "Tóquio"
+  },
+  {
+    "categoria": "abstencao",
+    "pergunta": "Quantas cadeiras havia na sala de reuniões da empresa Delton em 3 de março de 2024?",
+    "raciocinio": "Essa é uma informação interna e específica de uma empresa, sobre uma data determinada. Não há como saber isso sem acesso aos registros dela.",
+    "resposta": "Não sei responder, pois não tenho essa informação."
+  }
+]

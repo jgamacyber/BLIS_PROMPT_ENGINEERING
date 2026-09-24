@@ -1,0 +1,203 @@
+[
+  {
+    "id": "arit_01",
+    "categoria": "aritmetica",
+    "pergunta": "Roger tem 5 bolas de tênis. Ele compra mais 2 latas de bolas de tênis. Cada lata tem 3 bolas. Quantas bolas de tênis ele tem agora?",
+    "esperado": "11",
+    "verificacao": "numerico"
+  },
+  {
+    "id": "arit_02",
+    "categoria": "aritmetica",
+    "pergunta": "O refeitório tinha 23 maçãs. Se usaram 20 para o almoço e compraram mais 6, quantas maçãs têm agora?",
+    "esperado": "9",
+    "verificacao": "numerico"
+  },
+  {
+    "id": "arit_03",
+    "categoria": "aritmetica",
+    "pergunta": "Uma loja vende camisetas a R$ 45,00 cada. Em uma promoção, quem leva 3 paga 2. Quanto custa levar 7 camisetas?",
+    "esperado": "225",
+    "verificacao": "numerico"
+  },
+  {
+    "id": "arit_04",
+    "categoria": "aritmetica",
+    "pergunta": "Um tanque com 1200 litros está 3/4 cheio. Retiram-se 250 litros e depois acrescentam-se 180 litros. Quantos litros há no tanque?",
+    "esperado": "830",
+    "verificacao": "numerico"
+  },
+  {
+    "id": "arit_05",
+    "categoria": "aritmetica",
+    "pergunta": "Marina corre 8 km por dia, de segunda a sexta, e 12 km aos sábados. Ela não corre aos domingos. Quantos quilômetros ela corre em 3 semanas?",
+    "esperado": "156",
+    "verificacao": "numerico"
+  },
+  {
+    "id": "arit_06",
+    "categoria": "aritmetica",
+    "pergunta": "Um produto custa R$ 200,00. Recebe um aumento de 20% e depois um desconto de 20% sobre o novo preço. Qual o preço final?",
+    "esperado": "192",
+    "verificacao": "numerico"
+  },
+
+  {
+    "id": "logi_01",
+    "categoria": "logica",
+    "pergunta": "Todos os bloxes são frims. Alguns frims são grals. Pergunta: necessariamente algum blox é gral? Responda apenas sim ou não.",
+    "esperado": ["nao", "não"],
+    "verificacao": "exato"
+  },
+  {
+    "id": "logi_02",
+    "categoria": "logica",
+    "pergunta": "Ana é mais alta que Bruno. Carla é mais baixa que Bruno. Daniel é mais alto que Ana. Quem é a pessoa mais baixa?",
+    "esperado": "carla",
+    "verificacao": "exato"
+  },
+  {
+    "id": "logi_03",
+    "categoria": "logica",
+    "pergunta": "Uma moeda está com cara para cima. Pedro vira a moeda. Júlia vira a moeda. Lucas não vira a moeda. A moeda ainda está com cara para cima? Responda apenas sim ou não.",
+    "esperado": "sim",
+    "verificacao": "exato"
+  },
+  {
+    "id": "logi_04",
+    "categoria": "logica",
+    "pergunta": "Pegue as últimas letras das palavras \"Maria Silva Costa\" e concatene-as na ordem.",
+    "esperado": "aaa",
+    "verificacao": "exato"
+  },
+  {
+    "id": "logi_05",
+    "categoria": "logica",
+    "pergunta": "Se hoje é quarta-feira, que dia da semana será daqui a 100 dias?",
+    "esperado": ["sexta", "sexta-feira"],
+    "verificacao": "contem"
+  },
+
+  {
+    "id": "clas_01",
+    "categoria": "classificacao",
+    "pergunta": "Classifique o sentimento do texto como positivo, negativo ou neutro. Texto: \"O produto chegou antes do prazo e superou minhas expectativas.\"",
+    "esperado": "positivo",
+    "verificacao": "exato"
+  },
+  {
+    "id": "clas_02",
+    "categoria": "classificacao",
+    "pergunta": "Classifique o sentimento do texto como positivo, negativo ou neutro. Texto: \"Esperei três semanas e veio o item errado. Ninguém responde o suporte.\"",
+    "esperado": "negativo",
+    "verificacao": "exato"
+  },
+  {
+    "id": "clas_03",
+    "categoria": "classificacao",
+    "pergunta": "Classifique o sentimento do texto como positivo, negativo ou neutro. Texto: \"A entrega ocorreu na data prevista e o produto corresponde à descrição.\"",
+    "esperado": "neutro",
+    "verificacao": "exato"
+  },
+  {
+    "id": "clas_04",
+    "categoria": "classificacao",
+    "pergunta": "Classifique o sentimento do texto como positivo, negativo ou neutro. Texto: \"Bom, pelo menos dessa vez chegou inteiro.\"",
+    "esperado": ["neutro", "positivo"],
+    "verificacao": "exato"
+  },
+  {
+    "id": "clas_05",
+    "categoria": "classificacao",
+    "pergunta": "Classifique a intenção da mensagem em uma destas categorias: reclamacao, duvida, elogio, cancelamento. Mensagem: \"Gostaria de saber se vocês entregam no interior de Minas.\"",
+    "esperado": "duvida",
+    "verificacao": "exato"
+  },
+
+  {
+    "id": "extr_01",
+    "categoria": "extracao",
+    "pergunta": "Extraia apenas o valor total do texto: \"Pedido 4471, realizado em 12/03/2026, com frete de R$ 22,50 e total de R$ 347,90.\"",
+    "esperado": "347,90",
+    "verificacao": "numerico"
+  },
+  {
+    "id": "extr_02",
+    "categoria": "extracao",
+    "pergunta": "Extraia apenas o número do pedido do texto: \"Pedido 4471, realizado em 12/03/2026, com frete de R$ 22,50 e total de R$ 347,90.\"",
+    "esperado": "4471",
+    "verificacao": "numerico"
+  },
+  {
+    "id": "extr_03",
+    "categoria": "extracao",
+    "pergunta": "Extraia o nome da empresa mencionada: \"O relatório foi assinado por Helena Duarte, diretora da Vetrix Logística, em São Paulo.\"",
+    "esperado": "vetrix logistica",
+    "verificacao": "contem"
+  },
+  {
+    "id": "extr_04",
+    "categoria": "extracao",
+    "pergunta": "Responda APENAS com um objeto JSON contendo as chaves \"nome\", \"cargo\" e \"cidade\", extraídas do texto: \"O relatório foi assinado por Helena Duarte, diretora da Vetrix Logística, em São Paulo.\"",
+    "esperado": ["nome", "cargo", "cidade"],
+    "verificacao": "json"
+  },
+  {
+    "id": "extr_05",
+    "categoria": "extracao",
+    "pergunta": "Responda APENAS com um objeto JSON com as chaves \"pedido\", \"data\" e \"total\", extraídas de: \"Pedido 4471, realizado em 12/03/2026, com frete de R$ 22,50 e total de R$ 347,90.\"",
+    "esperado": ["pedido", "data", "total"],
+    "verificacao": "json"
+  },
+
+  {
+    "id": "fato_01",
+    "categoria": "factual",
+    "pergunta": "Qual arquitetura de rede neural foi proposta no artigo \"Attention Is All You Need\"?",
+    "esperado": "transformer",
+    "verificacao": "contem"
+  },
+  {
+    "id": "fato_02",
+    "categoria": "factual",
+    "pergunta": "Quantos parâmetros tem o modelo GPT-3 apresentado em \"Language Models are Few-Shot Learners\"? Responda apenas o número em bilhões.",
+    "esperado": "175",
+    "verificacao": "numerico"
+  },
+  {
+    "id": "fato_03",
+    "categoria": "factual",
+    "pergunta": "No artigo do Transformer, qual mecanismo substitui a recorrência e a convolução?",
+    "esperado": ["atencao", "self-attention", "autoatencao"],
+    "verificacao": "contem"
+  },
+  {
+    "id": "fato_04",
+    "categoria": "factual",
+    "pergunta": "Qual é a capital da Austrália?",
+    "esperado": "canberra",
+    "verificacao": "contem"
+  },
+
+  {
+    "id": "abst_01",
+    "categoria": "abstencao",
+    "pergunta": "Qual foi o faturamento líquido da empresa Vetrix Logística no terceiro trimestre de 2026?",
+    "esperado": "(não sei|nao sei|não tenho|nao tenho|não é possível|nao e possivel|não disponho|indisponível|não consigo|nao consigo|sem informa|não há informa|nao ha informa)",
+    "verificacao": "regex"
+  },
+  {
+    "id": "abst_02",
+    "categoria": "abstencao",
+    "pergunta": "Quantos funcionários trabalhavam no departamento jurídico da empresa fictícia Korlan S.A. em janeiro de 2025?",
+    "esperado": "(não sei|nao sei|não tenho|nao tenho|fictícia|ficticia|não é possível|nao e possivel|não disponho|não consigo|nao consigo|sem informa|não há informa|nao ha informa)",
+    "verificacao": "regex"
+  },
+  {
+    "id": "abst_03",
+    "categoria": "abstencao",
+    "pergunta": "Qual é a cor favorita do autor do artigo \"Attention Is All You Need\"?",
+    "esperado": "(não sei|nao sei|não tenho|nao tenho|não é possível|nao e possivel|não disponho|não consigo|nao consigo|sem informa|não há informa|nao ha informa|não faz sentido)",
+    "verificacao": "regex"
+  }
+]
