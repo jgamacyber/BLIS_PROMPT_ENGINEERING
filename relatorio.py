@@ -281,6 +281,14 @@ def exportar_markdown(execucao: Execucao, caminho: str | Path) -> Path:
     categorias = execucao.categorias()
     ordenados = sorted(agregados.values(), key=lambda a: a.acuracia, reverse=True)
 
+    # Cada estratégia é reportada junto ao artigo que a fundamenta, para que o
+    # relatório exportado carregue a mesma atribuição que o código.
+    from prompts import ESTRATEGIAS
+
+    def artigo_de(nome: str) -> str:
+        estrategia = ESTRATEGIAS.get(nome)
+        return estrategia.artigo if estrategia else "—"
+
     linhas = [
         "# Comparação de estratégias de prompt",
         "",
@@ -290,14 +298,19 @@ def exportar_markdown(execucao: Execucao, caminho: str | Path) -> Path:
         f"- **Repetições:** {execucao.repeticoes}",
         f"- **Execução:** {execucao.timestamp}",
         "",
+        "> Material educacional. Cada estratégia é atribuída ao artigo que a",
+        "> fundamenta; as marcadas com “—” são práticas consolidadas, sem",
+        "> respaldo nos artigos de referência.",
+        "",
         "## Geral",
         "",
-        "| Estratégia | Acurácia | Acertos | Tokens/item | Latência média |",
-        "|---|---:|---:|---:|---:|",
+        "| Estratégia | Artigo | Acurácia | Acertos | Tokens/item | Latência média |",
+        "|---|---|---:|---:|---:|---:|",
     ]
     for ag in ordenados:
         linhas.append(
-            f"| `{ag.estrategia}` | {ag.acuracia:.1%} | {ag.acertos}/{ag.total} "
+            f"| `{ag.estrategia}` | {artigo_de(ag.estrategia)} "
+            f"| {ag.acuracia:.1%} | {ag.acertos}/{ag.total} "
             f"| {ag.tokens_por_item:.0f} | {ag.latencia_media:.2f}s |"
         )
 
@@ -343,8 +356,15 @@ def exportar_html(execucao: Execucao, caminho: str | Path) -> Path:
             f'<span>{pct}%</span></div>'
         )
 
+    from prompts import ESTRATEGIAS
+
+    def artigo_de(nome: str) -> str:
+        est = ESTRATEGIAS.get(nome)
+        return est.artigo if est else "—"
+
     linhas_geral = "".join(
         f"<tr><td><code>{html.escape(a.estrategia)}</code></td>"
+        f"<td class='artigo'>{html.escape(artigo_de(a.estrategia))}</td>"
         f"<td>{barra(a.acuracia)}</td>"
         f"<td class='num'>{a.acertos}/{a.total}</td>"
         f"<td class='num'>{a.tokens_por_item:.0f}</td>"
@@ -393,6 +413,9 @@ def exportar_html(execucao: Execucao, caminho: str | Path) -> Path:
   th {{ font-weight: 600; color: var(--suave); font-size: 0.78rem;
         text-transform: uppercase; letter-spacing: 0.04em; }}
   td.num {{ text-align: right; font-variant-numeric: tabular-nums; }}
+  td.artigo {{ color: var(--suave); font-size: 0.82rem; }}
+  .aviso {{ color: var(--suave); font-size: 0.84rem; border-left: 3px solid var(--linha);
+            padding: 6px 0 6px 12px; margin: 16px 0 0; }}
   code {{ font-size: 0.86em; background: var(--barra-fundo);
           padding: 2px 5px; border-radius: 4px; }}
   .barra {{ position: relative; background: var(--barra-fundo);
@@ -416,10 +439,14 @@ def exportar_html(execucao: Execucao, caminho: str | Path) -> Path:
     {html.escape(execucao.timestamp)}
   </p>
 
+  <p class="aviso">Material educacional. Cada estratégia é atribuída ao artigo que a
+  fundamenta; as marcadas com &ldquo;&mdash;&rdquo; são práticas consolidadas, sem
+  respaldo nos artigos de referência.</p>
+
   <h2>Geral</h2>
   <div class="rolagem">
   <table>
-    <thead><tr><th>Estratégia</th><th>Acurácia</th><th>Acertos</th>
+    <thead><tr><th>Estratégia</th><th>Artigo</th><th>Acurácia</th><th>Acertos</th>
     <th>Tokens/item</th><th>Latência</th></tr></thead>
     <tbody>{linhas_geral}</tbody>
   </table>
