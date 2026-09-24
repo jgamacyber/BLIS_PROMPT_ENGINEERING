@@ -18,7 +18,7 @@ Cada técnica implementada é **referenciada ao artigo de origem ao longo de tod
 | Zhou et al. (2023), *LLMs are Human-Level Prompt Engineers* (APE) | Algoritmo 1: propor, pontuar, filtrar, reamostrar instruções | `ape.py` |
 | Kojima et al. (2022), *LLMs are Zero-Shot Reasoners* | Chain-of-thought sem demonstrações; citado pelo APE | `prompts.py` |
 
-As técnicas que **não** vêm de nenhum artigo (`persona` e `estruturada`) estão marcadas como tal, tanto na tabela abaixo quanto no código — justamente para que a distinção entre o que tem respaldo empírico e o que é prática consolidada fique explícita.
+As técnicas que **não** vêm de nenhum artigo (`persona` e `estruturada`) estão marcadas como tal, tanto na tabela abaixo quanto no código justamente para que a distinção entre o que tem respaldo empírico e o que é prática consolidada fique explícita.
 
 ## As estratégias comparadas
 
@@ -34,7 +34,7 @@ As técnicas que **não** vêm de nenhum artigo (`persona` e `estruturada`) est�
 | `cot_few_shot` | Demonstrações com cadeia de raciocínio | Wei et al. |
 | `ape` | Instrução descoberta automaticamente por busca | Zhou et al. |
 
-`persona` e `estruturada` não vêm de nenhum dos artigos — são práticas consolidadas entre praticantes. Estão aqui exatamente para serem confrontadas com as técnicas que têm respaldo empírico.
+`persona` e `estruturada` não vêm de nenhum dos artigos, são práticas consolidadas entre praticantes. Estão aqui exatamente para serem confrontadas com as técnicas que têm respaldo empírico.
 
 ## Início rápido
 
