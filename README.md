@@ -4,7 +4,7 @@ Script e notebook que recebem um conjunto de perguntas, rodam **versões diferen
 
 Tudo implementado do zero, sem frameworks de prompting. As estratégias são fundamentadas nos artigos, não em folclore de internet — e cada uma é **medida** em vez de assumida.
 
-> ⚠️ **Aviso de uso.** Este material é **educacional**, voltado ao estudo de técnicas de prompting e à sua avaliação empírica. As implementações são reproduções didáticas e simplificadas dos artigos originais — não substituem os métodos publicados nem os resultados neles reportados.
+> ⚠️ **Aviso de uso.** Este material é **educacional**, voltado ao estudo de técnicas de prompting e à sua avaliação empírica. As implementações são reproduções didáticas e simplificadas dos artigos originais  não substituem os métodos publicados nem os resultados neles reportados.
 
 ## Artigos de referência
 
