@@ -8,7 +8,7 @@ Tudo implementado do zero, sem frameworks de prompting. As estratégias são fun
 
 | Artigo | O que aparece no código |
 |---|---|
-| Vaswani et al. (2017), *Attention Is All You Need* | O Transformer e a janela de contexto — por que o tamanho e a posição do prompt importam |
+| Vaswani et al. (2017), *Attention Is All You Need* | O Transformer e a janela de contexto --> por que o tamanho e a posição do prompt importam |
 | Brown et al. (2020), *Language Models are Few-Shot Learners* | As definições de zero-shot, one-shot e few-shot; aprendizado em contexto sem atualizar pesos |
 | Wei et al. (2022), *Chain-of-Thought Prompting* | Demonstrações como triplas ⟨entrada, cadeia de pensamento, saída⟩ |
 | Zhou et al. (2023), *LLMs are Human-Level Prompt Engineers* (APE) | Algoritmo 1: propor, pontuar, filtrar, reamostrar instruções |
