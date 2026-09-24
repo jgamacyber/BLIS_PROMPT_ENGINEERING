@@ -1,17 +1,24 @@
 # BLIS — Módulo 02: Engenharia de Prompts
 
-Script e notebook que recebem um conjunto de perguntas, rodam **versões diferentes de prompt** --> zero-shot, few-shot, com persona, com instrução estruturada, chain-of-thought <-- e **comparam as saídas**. Inclui roteamento de prompts e otimização automática de instrução.
+Script e notebook que recebem um conjunto de perguntas, rodam **versões diferentes de prompt** --> zero-shot, few-shot, com persona, com instrução estruturada, chain-of-thought  e **comparam as saídas**. Inclui roteamento de prompts e otimização automática de instrução.
 
-Tudo implementado do zero, sem frameworks de prompting. As estratégias são fundamentadas nos artigos, não em folclore de internet  e cada uma é **medida** em vez de assumida.
+Tudo implementado do zero, sem frameworks de prompting. As estratégias são fundamentadas nos artigos, não em folclore de internet — e cada uma é **medida** em vez de assumida.
+
+> ⚠️ **Aviso de uso.** Este material é **educacional**, voltado ao estudo de técnicas de prompting e à sua avaliação empírica. As implementações são reproduções didáticas e simplificadas dos artigos originais — não substituem os métodos publicados nem os resultados neles reportados.
 
 ## Artigos de referência
 
-| Artigo | O que aparece no código |
-|---|---|
-| Vaswani et al. (2017), *Attention Is All You Need* | O Transformer e a janela de contexto --> por que o tamanho e a posição do prompt importam |
-| Brown et al. (2020), *Language Models are Few-Shot Learners* | As definições de zero-shot, one-shot e few-shot; aprendizado em contexto sem atualizar pesos |
-| Wei et al. (2022), *Chain-of-Thought Prompting* | Demonstrações como triplas ⟨entrada, cadeia de pensamento, saída⟩ |
-| Zhou et al. (2023), *LLMs are Human-Level Prompt Engineers* (APE) | Algoritmo 1: propor, pontuar, filtrar, reamostrar instruções |
+Cada técnica implementada é **referenciada ao artigo de origem ao longo de todo o trabalho**: no docstring do módulo que a implementa, na tabela de estratégias do `main.py listar`, nos comentários das decisões de projeto e nos relatórios gerados. A intenção é que quem ler o código consiga ir direto ao artigo que fundamenta cada escolha.
+
+| Artigo | O que aparece no código | Onde |
+|---|---|---|
+| Vaswani et al. (2017), *Attention Is All You Need* | O Transformer e a janela de contexto — por que o tamanho e a posição do prompt importam | `prompts.py`, `README` |
+| Brown et al. (2020), *Language Models are Few-Shot Learners* | As definições de zero-shot, one-shot e few-shot; aprendizado em contexto sem atualizar pesos | `prompts.py` |
+| Wei et al. (2022), *Chain-of-Thought Prompting* | Demonstrações como triplas ⟨entrada, cadeia de pensamento, saída⟩ | `prompts.py` |
+| Zhou et al. (2023), *LLMs are Human-Level Prompt Engineers* (APE) | Algoritmo 1: propor, pontuar, filtrar, reamostrar instruções | `ape.py` |
+| Kojima et al. (2022), *LLMs are Zero-Shot Reasoners* | Chain-of-thought sem demonstrações; citado pelo APE | `prompts.py` |
+
+As técnicas que **não** vêm de nenhum artigo (`persona` e `estruturada`) estão marcadas como tal, tanto na tabela abaixo quanto no código — justamente para que a distinção entre o que tem respaldo empírico e o que é prática consolidada fique explícita.
 
 ## As estratégias comparadas
 
